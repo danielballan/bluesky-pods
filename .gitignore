@@ -1,4 +1,5 @@
 *~
+*.swp
 history.sqlite
 bluesky_config/**/db/
 bluesky_config/**/security/
