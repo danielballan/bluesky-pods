@@ -561,12 +561,8 @@ c.JupyterHub.authenticator_class = 'jupyterhub.auth.DummyAuthenticator'
 #    - localprocess: jupyterhub.spawner.LocalProcessSpawner
 #    - simple: jupyterhub.spawner.SimpleLocalProcessSpawner
 #  Default: 'jupyterhub.spawner.LocalProcessSpawner'
-c.JupyterHub.spawner_class = 'dockerspawner.DockerSpwaner'
-
-c.DockerSpawner.remove_containers = True
-c.DockerSpawner.image_whitelist = [
-    'jupyter/scipy-notebook',
-]
+c.JupyterHub.spawner_class = 'podmanspawner.PodmanSpawner'
+c.PodmanSpawner.image = 'jupyter/scipy-notebook'
 
 ## Path to SSL certificate file for the public facing interface of the proxy
 #  

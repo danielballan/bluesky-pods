@@ -7,3 +7,10 @@ bluesky_config/**/log/
 bluesky_config/**/pid/
 __pycache__
 image_builders/pip_cache
+
+# JupyterHub installation on host produces these
+node_modules
+.jupyterhub_venv
+package-lock.json
+jupyterhub.sqlite
+jupyterhub_cookie_secret
