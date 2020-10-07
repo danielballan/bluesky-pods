@@ -198,3 +198,16 @@ The data flow is
 
 
 ```
+
+## Jupyter
+
+We install and run JupyterHub *on the host machine with sudo*. It spawnws user
+pods using podman via a custom JupyterHub Spawner.
+
+```bash
+scripts/install_jupyterhub_on_host_debian.sh  # assumes 'apt'
+sudo scripts/run_jupyterhub_on_host.sh
+```
+
+Navigate to `http://localhost:9000`. Any username and any password will be
+accepted because the `DummyAuthenticator` is used.

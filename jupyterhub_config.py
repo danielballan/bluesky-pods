@@ -451,7 +451,7 @@ c.JupyterHub.authenticator_class = 'jupyterhub.auth.DummyAuthenticator'
 #  .. deprecated: 0.9
 #      Use JupyterHub.bind_url
 #  Default: 8000
-# c.JupyterHub.port = 8000
+c.JupyterHub.port = 9000
 
 ## DEPRECATED since version 0.8 : Use ConfigurableHTTPProxy.api_url
 #  Default: ''
