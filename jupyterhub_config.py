@@ -561,7 +561,7 @@ c.JupyterHub.authenticator_class = 'jupyterhub.auth.DummyAuthenticator'
 #    - localprocess: jupyterhub.spawner.LocalProcessSpawner
 #    - simple: jupyterhub.spawner.SimpleLocalProcessSpawner
 #  Default: 'jupyterhub.spawner.LocalProcessSpawner'
-c.JupyterHub.spawner_class = 'dockerspawner.DockerSpwaner'
+c.JupyterHub.spawner_class = 'podmanspawner.PodmanSpawner'
 
 c.DockerSpawner.remove_containers = True
 c.DockerSpawner.image_whitelist = [
