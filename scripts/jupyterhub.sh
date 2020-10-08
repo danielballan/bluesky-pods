@@ -4,7 +4,17 @@
 # JupyterHub at https://tljh.jupyter.org/en/latest/install/custom-server.html
 # but it is inherently multi-user and too opinionated for this application.
 set -e
+
 apt-get update
+apt-get install -y curl gnupg2
+
+# https://podman.io/getting-started/installation.html
+. /etc/os-release
+echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/ /" | tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/Release.key | apt-key add -
+apt-get update
+apt-get -y upgrade
+apt-get -y install podman
 
 # The nodejs installation process prompts interactively for timezone info. Set
 # the timezone info here instead.
