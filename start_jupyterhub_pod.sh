@@ -4,7 +4,7 @@ set -e
 
 podman run -dt \
     -p 8000 \
-    -e PYTHONPATH=`pwd`/opt/podmanspawner \
+    -e PYTHONPATH=/opt/podmanspawner \
     -v `pwd`/jupyterhub_config.py:/etc/jupyterhub/jupyterhub_config.py \
     -v `pwd`/podmanspawner:/opt/podmanspawner \
     jupyterhub
