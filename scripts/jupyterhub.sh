@@ -27,3 +27,5 @@ dpkg-reconfigure --frontend noninteractive tzdata
 apt-get install -y python3 python3-pip curl npm nodejs
 pip3 install jupyterhub dockerspawner
 npm install -g configurable-http-proxy
+
+useradd --create-home jovyan
